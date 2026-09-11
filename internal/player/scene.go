@@ -99,13 +99,13 @@ func RenderSceneASS(scene Scene) string {
 func assSceneText(element SceneElement) string {
 	weight := 0
 	if element.Bold {
-		weight = 900
+		weight = 1
 	}
 	clip := ""
 	if element.Width > 0 && element.Height > 0 {
 		clip = fmt.Sprintf("\\clip(%d,%d,%d,%d)", element.X, element.Y, element.X+element.Width, element.Y+element.Height)
 	}
-	return fmt.Sprintf("{\\an7\\pos(%d,%d)\\fnNoto Sans CJK SC\\fs%d\\b%d\\bord0\\shad0\\1c&H%s&%s}%s",
+	return fmt.Sprintf("{\\an7\\pos(%d,%d)\\fnInter 18pt\\fs%d\\b%d\\bord0\\shad0\\1c&H%s&%s}%s",
 		element.X, element.Y, element.FontSize, weight, element.Color, clip, escapeASS(element.Text))
 }
 
