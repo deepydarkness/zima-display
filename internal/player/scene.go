@@ -99,7 +99,7 @@ func RenderSceneASS(scene Scene) string {
 func assSceneText(element SceneElement) string {
 	weight := 0
 	if element.Bold {
-		weight = 1
+		weight = 900
 	}
 	clip := ""
 	if element.Width > 0 && element.Height > 0 {

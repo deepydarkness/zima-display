@@ -242,7 +242,7 @@ func renderClock(now time.Time, locale string, fontScale float64) string {
 func assText(x, y, size int, color, value string, bold bool) string {
 	weight := 0
 	if bold {
-		weight = 1
+		weight = 900
 	}
 	return fmt.Sprintf("{\\an7\\pos(%d,%d)\\fnNoto Sans CJK SC\\fs%d\\b%d\\bord0\\shad0\\1c&H%s&}%s", x, y, size, weight, color, escapeASS(value))
 }
